@@ -1,5 +1,6 @@
 ﻿using Core.DataAccess;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,5 +11,6 @@ namespace DataAccess.Abstract
     //Product'a özel operasyonlar için kullanılır.Ürün detay gibi,ürün ve kategoriye join atmak gibi
     public interface IProductDal : IEntityRepository<Product>//Productla ilgili yapılacak işlemler buraya yazılır.
     {
+        List<ProductDetailsDto> GetProductDetails();
     }
 }
